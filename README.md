@@ -75,4 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Community forums and tutorials for assistance with IoT and AWS setup.
 
 ## Contact
-For any questions or feedback, please reach out to Sathish at [your-email@example.com].
+For any questions or feedback, please reach out to Sathish at sathishkkumar2101@gmail.com.
