@@ -1,10 +1,6 @@
+Parking Management System In a Mall-Project Report
 
-Parking Management System In a Mall-
-Project Report
-Abstract
-
-<img width="754" height="427" alt="image" src="https://github.com/user-attachments/assets/110e43ef-2b04-49ec-b75c-26030c4349d6" />
-
+**Abstract**
 This project presents a cloud-based Parking Management System that leverages IoT
 technology to detect real-time parking spot availability and enables users to reserve parking
 spaces. The system integrates ultrasonic sensors for detecting parking space occupancy, AWS
@@ -13,7 +9,9 @@ parking spot is updated in DynamoDB, and users can interact with the system thro
 based frontend to view parking availability or reserve a spot. The project demonstrates the
 application of IoT and serverless computing for efficient parking management in urban
 environments, providing an automated and scalable solution for smart cities.
-1. Introduction
+
+
+**1. Introduction**
 With the increasing number of vehicles, parking space management has become a significant
 challenge, especially in urban areas. The Parking Management System project aims to
 simplify and automate the process of managing parking spaces using IoT technology and
@@ -21,7 +19,8 @@ cloud services. This system provides real-time parking space availability, manag
 reservations, and integrates sensor data to ensure seamless parking operations.
 This report provides a comprehensive overview of the system, its architecture, functionality,
 implementation, and potential future enhancements.
-2. Objectives
+
+**2. Objectives**
 The primary objective of this project is to design and implement a scalable parking
 management system that:
  Detects parking space availability using IoT sensors.
@@ -30,7 +29,8 @@ management system that:
  Manages reservation times and displays availability accordingly.
  Integrates AWS services such as DynamoDB, Lambda, and IoT Core for backend
 management.
-3. System Architecture
+
+**3. System Architecture**
 The system architecture consists of the following components:
 1. IoT Devices (Ultrasonic Sensors): These sensors detect whether a parking spot is occupied or
 available.
@@ -43,51 +43,55 @@ status and reservation information.
 5. API Gateway: Exposes API endpoints for the web application to interact with the backend.
 6. Web Application (Frontend): Displays real-time parking information and allows users to
 reserve parking spots.
-4. Implementation Details
+
+**4. Implementation Details**
 4.1 Hardware Components
  Ultrasonic Sensor: This sensor is used to detect the occupancy of a parking space.
  Microcontroller (ESP8266): Communicates with AWS IoT Core to transmit the sensor data to
 the cloud.
  Programming Implementation in Arduino IDE .
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/020b374f-4ab6-439b-8beb-549b24f2b576" />
 
+<img width="475" height="269" alt="image" src="https://github.com/user-attachments/assets/8ffbaca1-b332-4cb4-a715-3801f8fd9d4e" />
+
+ Microcontroller (ESP8266): Communicates with AWS IoT Core to transmit the sensor data to
+the cloud.
+ Programming Implementation in Arduino IDE .
 4.2 AWS Infrastructure
+
+<img width="474" height="274" alt="image" src="https://github.com/user-attachments/assets/acb012ac-9351-4a1c-8ff8-c92baf54c7b1" />
+
  AWS IoT Core: The sensor data is transmitted to AWS IoT Core. The data is then
 routed to a Lambda function that processes the information and stores it in
 DynamoDB.
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/3b84210d-f368-4677-94c3-b47208498778" />
-
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/f80eed5e-69f9-4512-92f5-7bd7d5a3e4a8" />
-
  AWS Lambda: Two Lambda functions are implemented:
 1. Sensor Data Processing: This function stores parking spot availability in the
 DynamoDB table based on sensor data.
 2. Reservation Management: This function handles reservation creation and expiry
 logic, updating the availability status accordingly.
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/017d133b-2625-4296-b201-0075bbfc5f20" />
+
+<img width="475" height="569" alt="image" src="https://github.com/user-attachments/assets/4ffbe1d3-e72c-47ba-bd6e-79fb433793d1" />
+
  DynamoDB: Two tables are created:
 1. ParkingSpaces Table: Stores the real-time status of parking spaces
 (occupied/available).
 2. Reservations Table: Stores reservation details, including start time and expiry time.
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/f3680442-5f12-486d-915e-9cec5d5cb6c7" />
+
+3. <img width="472" height="270" alt="image" src="https://github.com/user-attachments/assets/c70c0865-bca4-44d5-8d6e-a18d5aeacc77" />
+
 API Gateway :
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/01ed131e-22dd-4373-aaac-51badecfb477" />
 
-
-
+<img width="476" height="268" alt="image" src="https://github.com/user-attachments/assets/b094449f-494b-48b9-a612-7f1a21622320" />
 
 4.3 Web Application (Frontend)
+
+<img width="470" height="548" alt="image" src="https://github.com/user-attachments/assets/dc1cf8d3-acc2-49c3-8b9d-688d85668972" />
+
 The web application provides the following functionalities:
  Displays a list of parking spaces with real-time availability updates.
  Allows users to reserve available parking spots.
  Shows a reservation countdown timer, which is displayed until the reservation expires.
  Fetches parking spot data from the backend API every 5 seconds to ensure real-time
 updates.
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/a1699eda-5670-4638-bdbb-52486edef98c" />
-
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/1255a447-a791-47d1-9d74-2450c872926c" />
-
-
 Frontend Code Overview:
  JavaScript/HTML: Used to fetch data from AWS API Gateway and dynamically update the
 parking spots in the UI.
@@ -95,7 +99,7 @@ parking spots in the UI.
 occupied or reserved, the system prevents further reservations for that spot.
  Reservation Timer: Displays a countdown timer for reserved spots.
 
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/e72f62ed-4248-4a1d-bc13-fca594e68ed4" />
+<img width="475" height="268" alt="image" src="https://github.com/user-attachments/assets/1bc08ad5-e01e-4a25-8aba-dafa2eac1046" />
 
 5. Key Functionalities
 1. Real-Time Parking Spot Detection:
@@ -184,18 +188,9 @@ handling scenarios where the sensor detects occupation was a challenge. This was
 addressed by managing separate states for sensor and reservation statuses.
  CORS Issues: Initially, there were CORS header issues when the frontend attempted to
 communicate with the AWS backend. This was resolved by adjusting API Gateway settings.
-7. workflow :
 
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/eefb381f-c831-450a-aeb5-f275c68b60ff" />
+<img width="230" height="439" alt="image" src="https://github.com/user-attachments/assets/f4f5a45e-a6cf-47dc-9648-7a5e7ad4e7fa" />
 
-<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/9bd137e7-5d86-4598-9f18-278a165b0970" />
-
-Ultrasonic Sensor
-AWS IOT CORE LAMBDA
-FUNCTION
-DYNAMODB
-API GATEWAY
-WEB APPLICATION
 9. Conclusion
 The Parking Management System successfully demonstrates the use of IoT and cloud
 services to manage parking spaces efficiently. It provides real-time updates on parking space
@@ -207,4 +202,4 @@ Appendix: Technologies Used
  Backend: AWS Lambda, API Gateway
  Database: AWS DynamoDB
  IoT: ESP8266, Ultrasonic Sensor
- Cloud Platform: AWS (IoT Core, Lambda, DynamoDB, API Gateway)
+ Cloud Platform: AWS (IoT Core, Lambda, DynamoDB, API Gateway
