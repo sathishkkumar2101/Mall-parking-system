@@ -185,6 +185,8 @@ communicate with the AWS backend. This was resolved by adjusting API Gateway set
 
 <img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/eefb381f-c831-450a-aeb5-f275c68b60ff" />
 
+<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/9bd137e7-5d86-4598-9f18-278a165b0970" />
+
 Ultrasonic Sensor
 AWS IOT CORE LAMBDA
 FUNCTION
