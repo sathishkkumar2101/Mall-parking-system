@@ -2,6 +2,9 @@
 Parking Management System In a Mall-
 Project Report
 Abstract
+
+<img width="754" height="427" alt="image" src="https://github.com/user-attachments/assets/110e43ef-2b04-49ec-b75c-26030c4349d6" />
+
 This project presents a cloud-based Parking Management System that leverages IoT
 technology to detect real-time parking spot availability and enables users to reserve parking
 spaces. The system integrates ultrasonic sensors for detecting parking space occupancy, AWS
