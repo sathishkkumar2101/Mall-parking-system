@@ -5,6 +5,7 @@ The Parking Management System aims to enhance the parking experience in malls by
 - Real-time detection of parking space availability using IoT sensors.
 - A user-friendly web application that displays the availability of parking spots.
 - Integration with AWS services for efficient backend management.
+<img width="2000" height="2828" alt="image" src="https://github.com/user-attachments/assets/b6325d73-4626-40e6-a9d1-d6f2b3233ee4" />
 
 ## Features
 - Detects parking space availability using ultrasonic IoT sensors.
